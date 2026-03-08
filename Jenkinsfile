@@ -11,9 +11,7 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                script {
-                    docker.build("prt-app:latest")
-                }
+                sh 'docker build -t prt-app .'
             }
         }
 
